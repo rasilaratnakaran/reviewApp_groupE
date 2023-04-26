@@ -1,6 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import user
+from .models import enquiry
+from django.contrib import messages
+from django.contrib.auth import authenticate, login
  
 from django.template import loader
  
@@ -11,14 +14,20 @@ def about(request):
         return render(request, 'myApp/about.html')
 def contact(request):
         return render(request, 'myApp/contact.html')
-def login(request):
-        return render(request, 'myApp/login.html')
+def signin(request):
+        return render(request, 'myApp/signin.html')
 def password(request):
         return render(request, 'myApp/password.html')
 def profile(request):
         return render(request, 'myApp/profile.html')
 def reg(request):
         return render(request, 'myApp/reg.html')
+def smartphone(request):
+        return render(request, 'myApp/smartphone.html')
+def smartwatch(request):
+        return render(request, 'myApp/smartwatch.html')
+def television(request):
+        return render(request, 'myApp/television.html')
 def reg(request):
             if request.method == 'POST':
              if request.POST.get('FirstName') and request.POST.get('LastName'):
@@ -35,9 +44,29 @@ def reg(request):
                 post.Password= request.POST.get('Password')
                     
                 post.save()
-                return render(request, 'myApp/reg.html')
+                
+                return render(request, 'myApp/signin.html')
             else:
                 return render(request,'myApp/reg.html')
+            
+def contact(request):
+            if request.method == 'POST':
+             if request.POST.get('FirstName') and request.POST.get('LastName'):
+                post=enquiry()
+                post.FirstName= request.POST.get('FirstName')
+                post.LastName= request.POST.get('LastName')
+                post.Email= request.POST.get('Email')
+                post.PhoneNumber= request.POST.get('PhoneNumber')
+                post.Message= request.POST.get('Message')
+                                    
+                post.save()
+                return render(request, 'myApp/contact.html')
+            else:
+                return render(request,'myApp/contact.html')
+
+
+            
+
 
        
 

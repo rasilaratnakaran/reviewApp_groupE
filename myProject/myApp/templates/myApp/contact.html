@@ -359,6 +359,12 @@
     {
       cursor: pointer;
     }
+    footer {
+  text-align: center;
+  padding: 0px;
+  background-color: red;
+  color: white;
+} 
   </style>
   </body>
   
@@ -381,12 +387,12 @@
     
   </head>
   
-  <Body bgcolor="lightyellow">  
+  <Body bgcolor="red">  
     <header>  
     <nav>  
     <ul>  
         <li>  
-            <a href=" "><i class="fa fa-home"></i><b> Home</b> </a>   
+          <a href="http://127.0.0.1:8000/ "><i class="fa fa-home"></i><b> Home</b> </a>   
           </li>  
              
     <li>  
@@ -394,23 +400,12 @@
     </li>  
     <li>  
         <a href="/contact"><i class="fa fa-fw fa-envelope"></i><b> Contact</b></a>  
-      </li> 
-      <li> 
-        <div class="dropdown">
-          <button class="dropbtn">
-            <a><i class="fa fa-product-hunt"></i><b> Product</b></a></button>
-            <div class="dropdown-content">
-              <a href="#">Smart Phone</a>
-              <a href="#">Smart Watch</a>
-              <a href="#">Television</a>
-            </div>
-          </div>
-      </li> 
-      
-     </div> </nav>
+    </li> 
+                 
+    </div> </nav>
     <nav>
      <li>
-       <a href="/login"><i class=' fa fa-fw fa-user'></i><b>Login/Register</b></a>
+       <a href="/signin"><i class=' fa fa-fw fa-user'></i><b>Login/Register</b></a>
      </li>
      
         </nav>
@@ -483,7 +478,7 @@
                 <input class="input" id="fname" name="FirstName" placeholder="First Name&nbsp;*" type="text"  required/>
               </div>
               <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i1ro7">
-                <input class="input" id="lname" name="Last Name" placeholder="Last Name &nbsp;*" type="text"  required >
+                <input class="input" id="lname" name="LastName" placeholder="Last Name &nbsp;*" type="text"  required >
                 
               </div>
   
@@ -496,11 +491,12 @@
   
               
               <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-7">
-                <textarea area-placeholder="Type message here" class="textinput" id="text" placeholder="Type message here&nbsp;*" rows="6" required></textarea>
+                <textarea area-placeholder="Type message here" class="textinput" id="text" name="Message" placeholder="Type message here&nbsp;*" rows="6" required></textarea>
               </div>
-              <button id="submitForm" class="submit-btn">Submit</button>
-               <script>
-                $("#submitForm").click(function() {
+              
+              <button id="submitFrm" class="submit-btn" name="submit">Submit</button>
+              <script>
+                $("#submitFrm").click(function() {
                   {
                   
                   }
@@ -520,6 +516,13 @@
   </div>
   
   </div>
+  <footer>
+    <p> © 2023 Gadget Aura. All rights reserved.</p>
+      
+      <p style="font-family:'Chiller'"> For Service-Related Enquiries Contact:service@gadgetaura.com</p>
+    </footer>
+  </body>
+  </html>
   
   
   

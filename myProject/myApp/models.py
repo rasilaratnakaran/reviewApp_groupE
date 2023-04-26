@@ -17,3 +17,13 @@ class user(models.Model):
  
 def __str__(self):
     	return self.FirstName
+class enquiry(models.Model):
+	FirstName = models.CharField(max_length=255)
+	LastName = models.CharField(max_length=255)
+	Email = models.EmailField()
+	PhoneNumber = models.IntegerField()
+	Message = models.CharField(max_length=255)
+
+	def __str__(self):
+         return self.FirstName
+	

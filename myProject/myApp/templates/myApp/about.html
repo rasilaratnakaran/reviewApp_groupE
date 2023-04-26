@@ -212,7 +212,13 @@ clear: both;
 display: table;
 
 }
-
+.content-section {
+  background: #faadad;
+  padding: 10px 300px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
 footer {
 
 text-align: center;
@@ -246,19 +252,19 @@ background-image: url("https://cdn.pixabay.com/photo/2021/07/15/20/52/gadgets-64
     
     <li>
     
-    <a href=" "><i class="fa fa-home"></i><b> Home</b> </a>
+    <a href="http://127.0.0.1:8000/ "><i class="fa fa-home"></i><b> Home</b> </a>
     
     </li>
     
     <li>
     
-    <a href="/about/"><i class="fa fa-fw fa-user"></i><b> About</b> </a>
+    <a href="http://127.0.0.1:8000/about"><i class="fa fa-fw fa-user"></i><b> About</b> </a>
     
     </li>
     
     <li>
     
-    <a href="/contact/"><i class="fa fa-fw fa-envelope"></i><b> Contact</b></a>
+    <a href="http://127.0.0.1:8000/contact"><i class="fa fa-fw fa-envelope"></i><b> Contact</b></a>
     
     </li>
     
@@ -285,6 +291,16 @@ background-image: url("https://cdn.pixabay.com/photo/2021/07/15/20/52/gadgets-64
     </li>
     
     </div> </nav>
+    <nav>
+      <li>
+        <a href="http://127.0.0.1:8000/login"><i class=' fa fa-fw fa-user'></i><b>Login/Register</b></a>
+      </li>
+      <li>
+        <div style= "margin-right: 5px"><a><b><i class='  fa fa-shopping-cart' ></i></b></a></div>
+      </li>
+      
+      
+    </nav>
     
     
     
@@ -353,6 +369,22 @@ span{
 }
 
 </style>
+<main class="container">
+  <div class="row">
+      
+     
+      <div class="col-md-4">
+<div class="content-section">
+  <h3>Browse by Category</h3>
+  <ul class="list-group">
+      <li class="list-group-item list-group-item-light"><a class="mr-2" href="/products/category/Smartphone">Smart Phone</a></li>
+      <li class="list-group-item list-group-item-light"><a class="mr-2" href="/products/category/Tablet">Smart Watch</a></li>
+      <li class="list-group-item list-group-item-light"><a class="mr-2" href="/products/category/Television">Television</a></li>
+  </ul>
+</div>
+</div>
+  </div>
+</main>
 
 <section class="about-us">
     <div class="about">
@@ -377,3 +409,5 @@ span{
   
 </body>
 </html>
+
+

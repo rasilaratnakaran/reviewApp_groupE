@@ -28,6 +28,12 @@ def smartwatch(request):
         return render(request, 'myApp/smartwatch.html')
 def television(request):
         return render(request, 'myApp/television.html')
+def product1(request):
+        return render(request, 'myApp/product1.html')
+def product2(request):
+        return render(request, 'myApp/product2.html')
+def product3(request):
+        return render(request, 'myApp/product3.html')
 def reg(request):
             if request.method == 'POST':
              if request.POST.get('FirstName') and request.POST.get('LastName'):
@@ -44,7 +50,7 @@ def reg(request):
                 post.Password= request.POST.get('Password')
                     
                 post.save()
-                
+                messages.success(request, "Your account has been created successfully.")
                 return render(request, 'myApp/signin.html')
             else:
                 return render(request,'myApp/reg.html')
@@ -63,6 +69,25 @@ def contact(request):
                 return render(request, 'myApp/contact.html')
             else:
                 return render(request,'myApp/contact.html')
+            
+def signin(request):
+            if request.method == 'POST':
+                username= request.POST['username']
+                password= request.POST['password']
+                user = authenticate(username=username, password=password)
+                if user is not None: 
+                       login(request,user)
+                       return render(request, 'myApp/profile.html')
+                                            
+                else:
+                       messages.error(request, "Bad credentials!")
+                       return render(request,'myApp/signin.html')
+            else:   
+                return render(request,'myApp/signin.html')
+def profile(request):
+    user = user.objects.all()
+    return render(request, 'myApp/profile.html', {"user":user})
+           
 
 
             

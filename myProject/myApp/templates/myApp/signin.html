@@ -216,9 +216,9 @@ font-style: italic;
             <p>Please enter your credentials to login.</p>
           </div>
         </div>
-        <form class="login-form" action="login" method="POST">
+        <form class="login-form" action="/signin" method="POST">
           {% csrf_token %}
-          <input type="text" name="username" placeholder="Email"/>
+          <input type="text" name="username" placeholder="Email as username"/>
           <input type="password" name="password" placeholder="Password"/>
           <button type="submit">login</button>
           <p class="message">Not registered? 

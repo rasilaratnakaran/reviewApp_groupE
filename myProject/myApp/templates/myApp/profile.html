@@ -151,7 +151,7 @@ footer {
      </div> </nav>
      <nav>
       <li>
-        <a href="http://127.0.0.1:8000/login"><i class=' fa fa-fw fa-user'></i><b>Login/Register</b></a>
+        <a href="http://127.0.0.1:8000/signin"><i class=' fa fa-fw fa-user'></i><b>Login/Register</b></a>
       </li>
      
       
@@ -179,37 +179,37 @@ footer {
                 <tr>
                   <th width="30%">First Name</th>
                   <td width="2%">:</td>
-                  <td></td>
+                  <td>{{ user.FirstName }}</td>
                 </tr>
                 <tr>
                   <th width="30%">Last Name</th>
                   <td width="2%">:</td>
-                  <td></td>
+                  <td>{{ user.LastName }}</td>
                 </tr>
                 <tr>
                   <th width="30%">DOB</th>
                   <td width="2%">:</td>
-                  <td></td>
+                  <td>{{ user.DOB }}</td>
                 </tr>
                 <tr>
                   <th width="30%">Address</th>
                   <td width="2%">:</td>
-                  <td></td>
+                  <td>{{ user.Address }}</td>
                 </tr>
                 <tr>
                   <th width="30%">Zip Code</th>
                   <td width="2%">:</td>
-                  <td></td>
+                  <td>{{ user.ZipCode }}</td>
                 </tr>
                 <tr>
                   <th width="30%">City/Town</th>
                   <td width="2%">:</td>
-                  <td></td>
+                  <td>{{ user.City }}</td>
                 </tr>
                 <tr>
                   <th width="30%">Country</th>
                   <td width="2%">:</td>
-                  <td></td>
+                  <td>{{ user.Country }}</td>
                 </tr>
               </table>
             </div>
